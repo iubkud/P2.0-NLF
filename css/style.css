@@ -1,5 +1,11 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
 .wrapper {
+	background: #1a9a90;
 	width: 100%;
+	padding: 35px;
+	color: #fff;
 }
 
 .header {
@@ -8,4 +14,62 @@
 
 .content {
 	width: 100%;
+	font-size: 24px;
+}
+
+
+input[type=text]::-webkit-input-placeholder { /* WebKit browsers */
+	color:    #B5E655;
+}
+input[type=text]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color:    #B5E655;
+	opacity:  1;
+}
+input[type=text]::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color:    #B5E655;
+	opacity:  1;
+}
+input[type=text]:-ms-input-placeholder { /* Internet Explorer 10+ */
+	color:    #B5E655;
+}
+
+input[type=text] {
+	border: none;
+	border-bottom: 1px dashed #EFEFEF;
+	background: transparent;
+	font-size: 24px;
+	outline: none;
+	color: #fff;
+}
+
+select {
+	font-size: 1em;
+	color: #B5E655;
+	border: none;
+	border-bottom: 1px dashed #EFEFEF;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: none;
+	width: auto;
+	text-indent: 0.01px;
+	text-overflow: "";
+	box-shadow: none;
+	font: inherit;
+}
+select:focus {
+	outline: none;
+	border-bottom: 1px dashed #DD0000;
+}
+
+button {
+	background: #1c4852;
+    border: none;
+    padding: 10px 50px;
+    font-size: 1em;
+    color: #FFF;
+    margin: 40px auto 0px auto;
+    cursor: pointer;
+    font: inherit;
+    outline: none;
+    border-radius: 3px;
 }
