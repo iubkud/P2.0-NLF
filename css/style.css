@@ -1,9 +1,11 @@
 body {
+	background: #1a9a90;
 	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
 }
 .wrapper {
-	background: #1a9a90;
-	width: 100%;
+	margin: 0 auto;
+	width: 65%;
 	padding: 35px;
 	color: #fff;
 }
@@ -14,23 +16,26 @@ body {
 
 .content {
 	width: 100%;
-	font-size: 24px;
+}
+
+.text {
+	padding: 10px 0;
 }
 
 
 input[type=text]::-webkit-input-placeholder { /* WebKit browsers */
-	color:    #B5E655;
+	color: #B5E655;
 }
 input[type=text]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-	color:    #B5E655;
-	opacity:  1;
+	color: #B5E655;
+	opacity: 1;
 }
 input[type=text]::-moz-placeholder { /* Mozilla Firefox 19+ */
-	color:    #B5E655;
-	opacity:  1;
+	color: #B5E655;
+	opacity: 1;
 }
 input[type=text]:-ms-input-placeholder { /* Internet Explorer 10+ */
-	color:    #B5E655;
+	color: #B5E655;
 }
 
 input[type=text] {
@@ -40,9 +45,11 @@ input[type=text] {
 	font-size: 24px;
 	outline: none;
 	color: #fff;
+	margin: 15px 0;
 }
 
 select {
+	margin: 15px 0;
 	font-size: 1em;
 	color: #B5E655;
 	border: none;

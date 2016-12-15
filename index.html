@@ -14,25 +14,36 @@
 
 		<div class="content">
 			<div class="nl-form">
-				I'd like to join a quick 
+				<span class="text">I'd like to join a quick </span>
 				<select id="type">
-					<option>Q&A</option>
-					<option>walkthrough</option>
+					<option value="qa">Q&A</option>
+					<option value="walkthrough">walkthrough</option>
 				</select>
 
 				<select id="when">
-					<option>now</option>
-					<option>today</option>
-					<option>tomorrow</option>
-					<option>this week</option>
+					<option value="now">now</option>
+					<option value="today">today</option>
+					<option value="tomorrow">tomorrow</option>
+					<option value="thisweek">this week</option>
 				</select>
 
-				to learn more. Here's my <input type="text" placeholder="email"/>.
+				<span class="text">to learn more. Here's my </span><input id="email" type="text" placeholder="email"/>
 
-				<button>Tell me how!</button>
+				<button id="demo-button">Tell me how!</button>
 			</div>
 		</div>
 	</div>
 
+	<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$('#demo-button').on('click touch', function() {
+			Intercom('update', {"email": $('#email').val(),
+								"demo_type": $('#type').val(),
+								"demo_when": $('#when').val()})
+		});
+	</script>
 </body>
 </html>
