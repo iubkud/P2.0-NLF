@@ -1,13 +1,21 @@
 body {
-	background: #1a9a90;
+	background: #a0d4c8;
 	font-family: 'Roboto', sans-serif;
-	font-size: 24px;
+	font-size: 100%;
 }
 .wrapper {
 	margin: 0 auto;
 	width: 65%;
 	padding: 35px;
 	color: #fff;
+	font-size: 2rem;
+}
+
+@media only screen and (max-width: 450px) {
+	.wrapper {
+		width: 95%;
+		padding: 35px 0;
+	}
 }
 
 .header {
@@ -24,52 +32,53 @@ body {
 
 
 input[type=text]::-webkit-input-placeholder { /* WebKit browsers */
-	color: #B5E655;
+	color: #ee906d;
 }
 input[type=text]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-	color: #B5E655;
+	color: #ee906d;
 	opacity: 1;
 }
 input[type=text]::-moz-placeholder { /* Mozilla Firefox 19+ */
-	color: #B5E655;
+	color: #ee906d;
 	opacity: 1;
 }
 input[type=text]:-ms-input-placeholder { /* Internet Explorer 10+ */
-	color: #B5E655;
+	color: #ee906d;
 }
 
 input[type=text] {
 	border: none;
-	border-bottom: 1px dashed #EFEFEF;
+	color: #ee906d;
+	border-bottom: 1px dashed #ee906d;
 	background: transparent;
-	font-size: 24px;
+	font-size: 2rem;
 	outline: none;
-	color: #fff;
 	margin: 15px 0;
 }
 
 select {
 	margin: 15px 0;
 	font-size: 1em;
-	color: #B5E655;
+	color: #ee906d;
 	border: none;
-	border-bottom: 1px dashed #EFEFEF;
+	border-bottom: 1px dashed #ee906d;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	background: none;
-	width: auto;
 	text-indent: 0.01px;
 	text-overflow: "";
 	box-shadow: none;
 	font: inherit;
+	border-radius: 0;
 }
+
 select:focus {
 	outline: none;
 	border-bottom: 1px dashed #DD0000;
 }
 
 button {
-	background: #1c4852;
+	background: #1a9a90;
     border: none;
     padding: 10px 50px;
     font-size: 1em;
@@ -79,4 +88,13 @@ button {
     font: inherit;
     outline: none;
     border-radius: 3px;
+}
+#type {
+	width: 65px;
+}
+#when {
+	width: 60px;
+}
+#type-resize-select, #when-resize-select {
+	display: none;
 }

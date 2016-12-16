@@ -8,16 +8,15 @@
 </head>
 <body>
 	<div class="wrapper">
-
-		<div class="header">
-		</div>
-
 		<div class="content">
 			<div class="nl-form">
 				<span class="text">I'd like to join a quick </span>
 				<select id="type">
 					<option value="qa">Q&A</option>
 					<option value="walkthrough">walkthrough</option>
+				</select>
+				<select id="type-resize-select">
+					<option id="type-resize-option"></option>
 				</select>
 
 				<select id="when">
@@ -27,9 +26,15 @@
 					<option value="thisweek">this week</option>
 				</select>
 
-				<span class="text">to learn more. Here's my </span><input id="email" type="text" placeholder="email"/>
+				<select id="when-resize-select">
+					<option id="when-resize-option"></option>
+				</select>
 
-				<button id="demo-button">Tell me how!</button>
+				<span class="text">to learn more.</span>
+
+				<p><span class="text">Here's my </span><input id="email" type="text" placeholder="email"/>.</p>
+				
+				<button id="demo-button">Get better every meeting</button>
 			</div>
 		</div>
 	</div>
@@ -43,6 +48,13 @@
 			Intercom('update', {"email": $('#email').val(),
 								"demo_type": $('#type').val(),
 								"demo_when": $('#when').val()})
+		});
+
+		$(document).ready(function() {
+			$('select').change(function(){
+				$("#" + this.id + "-resize-option").html($('#' + this.id + ' option:selected').text());
+				$(this).width($("#" + this.id + "-resize-select").width());  
+			});
 		});
 	</script>
 </body>
