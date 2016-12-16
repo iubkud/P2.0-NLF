@@ -31,22 +31,22 @@ body {
 }
 
 
-input[type=text]::-webkit-input-placeholder { /* WebKit browsers */
+#email::-webkit-input-placeholder { /* WebKit browsers */
 	color: #ee906d;
 }
-input[type=text]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-	color: #ee906d;
-	opacity: 1;
-}
-input[type=text]::-moz-placeholder { /* Mozilla Firefox 19+ */
+#email:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 	color: #ee906d;
 	opacity: 1;
 }
-input[type=text]:-ms-input-placeholder { /* Internet Explorer 10+ */
+#email::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: #ee906d;
+	opacity: 1;
+}
+#email:-ms-input-placeholder { /* Internet Explorer 10+ */
 	color: #ee906d;
 }
 
-input[type=text] {
+#email {
 	border: none;
 	color: #ee906d;
 	border-bottom: 1px dashed #ee906d;
@@ -54,9 +54,10 @@ input[type=text] {
 	font-size: 2rem;
 	outline: none;
 	margin: 15px 0;
+	max-width: 400px;
 }
 
-select {
+#type, #when {
 	margin: 15px 0;
 	font-size: 1em;
 	color: #ee906d;
@@ -72,12 +73,12 @@ select {
 	border-radius: 0;
 }
 
-select:focus {
+#type:focus, #when:focus {
 	outline: none;
 	border-bottom: 1px dashed #DD0000;
 }
 
-button {
+#demo-button {
 	background: #1a9a90;
     border: none;
     padding: 10px 50px;
